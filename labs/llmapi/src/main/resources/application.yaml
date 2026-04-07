@@ -6,6 +6,3 @@ openai:
   api-key: my_key
   url: https://api.openai.com/v1/chat/completions
   model: gpt-4o-mini
-
-#
-#

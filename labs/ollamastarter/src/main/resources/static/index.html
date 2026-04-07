@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring AI + Ollama Stream</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        #chat-box { border: 1px solid #ccc; padding: 20px; min-height: 200px; background: #f9f9f9; white-space: pre-wrap; }
+        button { padding: 10px 20px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+        input { padding: 10px; width: 70%; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+<h1>Ollama AI Stream</h1>
+<input type="text" id="userInput" placeholder="Ask something..." value="Write a short story about a robot">
+<button onclick="startStream()">Send Prompt</button>
+
+<h3>Response:</h3>
+<div id="chat-box"></div>
+
+<script>
+    async function startStream() {
+        const input = document.getElementById('userInput').value;
+        const chatBox = document.getElementById('chat-box');
+        chatBox.innerText = ""; // Limpar resposta anterior
+
+        // Chamada para o endpoint do Spring Boot
+        const response = await fetch(`/ai/stream?message=${encodeURIComponent(input)}`);
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            // O Spring AI envia eventos SSE (data: ...)
+            const chunk = decoder.decode(value, { stream: true });
+
+            // Limpar prefixos 'data:' que o SSE costuma enviar
+            const cleanChunk = chunk.replace(/^data:/gm, '').trim();
+
+            chatBox.innerText += cleanChunk+" ";
+        }
+    }
+</script>
+</body>
+</html>

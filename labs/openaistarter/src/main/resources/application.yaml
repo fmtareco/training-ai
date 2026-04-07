@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: openaistarter
+
+  ai:
+    openai:
+      api-key: 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
+      chat:
+        options:
+          model: gpt-3.5-turbo
