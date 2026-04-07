@@ -3,6 +3,8 @@ spring:
     name: llmapi
 
 openai:
-  api-key: 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
+  api-key: my_key
   url: https://api.openai.com/v1/chat/completions
   model: gpt-4o-mini
+
+#
