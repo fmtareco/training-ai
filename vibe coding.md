@@ -210,7 +210,8 @@
 		* works perfectly on mobile from day one. [5, 6, 7] 
 
 ## 2. The "Ultimate" Vibe Coding Prompt
-Copy and paste this prompt into your chosen tool to start the build. It uses "Context Layering" to ensure the AI understands the technical requirements. [8] 
+* Copy and paste this prompt into your chosen tool to start the build. 
+* It uses "Context Layering" to ensure the AI understands the technical requirements. [8] 
 
 "Build a full-stack media manager app called 'VibeGallery'.
 Core Feature: Users can upload or link folders of photos and videos.
@@ -221,7 +222,8 @@ Metadata Engine: For every item, create a database entry for:
 * People: A list of names (allow manual tagging for now).
 * Occasion: A custom text tag (e.g., 'Summer Wedding').
 
-The Killer Feature: A 'Smart Search' bar that handles ad-hoc natural language queries. Example: 'Show me videos of Maria at the beach from 2024' or 'Photos from Japan with John'.
+The Killer Feature: A 'Smart Search' bar that handles ad-hoc natural language queries. 
+Example: 'Show me videos of Maria at the beach from 2024' or 'Photos from Japan with John'.
 Vibe: Clean, minimalist, dark mode, using Shadcn UI components."
 [9] 
 
@@ -239,10 +241,10 @@ Don't try to build the whole app in one go. Vibe coding works best in phases: [8
    2. Phase 2: "Connect a database to store the location and time of each photo."
    3. Phase 3: "Add the ad-hoc search bar and make it filter the gallery live."
 
-Would you like me to help you refine the search logic so the AI knows exactly how to handle a query like "Everything with Dad from last Christmas"?
-
+## Resources
 [1] [https://www.youtube.com](https://www.youtube.com/watch?v=4SDKJ75XjVE)
-[2] [https://www.reddit.com](https://www.reddit.com/r/vibecoding/comments/1mturg5/finally_organized_20_years_of_my_lifes_photos_and/)
+[2] [https://www.reddit.com]
+	https://www.reddit.com/r/vibecoding/comments/1mturg5/finally_organized_20_years_of_my_lifes_photos_and/
 [3] [https://replit.com](https://replit.com/discover/best-ai-app-builder)
 [4] [https://lovable.dev](https://lovable.dev/guides/best-ai-app-builders)
 [5] [https://www.youtube.com](https://www.youtube.com/watch?v=19PY3XKCasg#:~:text=In%20today%27s%20video%20we%20cover%20How%20to,with%20replit%2C%20build%20no%20code%20ai%20apps.)
